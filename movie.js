@@ -1,4 +1,3 @@
-
 const options = {
     method: 'GET',
     headers: {
@@ -29,7 +28,7 @@ async function getdata() {
         movieinfo['overview'] = item['overview'];
         movieinfo['poster_path'] = item['poster_path'];
         movieinfo['vote_average'] = item['vote_average'];
-        movieinfo['movie_id'] = item['movie_id '];
+        movieinfo['movie_id'] = item['movie_id'];
 
         // console.log(movieinfo);
         newmovieinfo.push(movieinfo);
@@ -43,7 +42,7 @@ getdata();
 function makeCard(item, count) {
     const innerContents = `
     <div class="card" style="width: 18rem;">
-    <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" class="card-img-top" alt="이미지 준비중" onclick ="alert(${'item.movie_id'})">
+    <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" class="card-img-top" alt="이미지 준비중" onclick = "alert(${item.movie_id})">
           <div class="card-body">
              <h5 class="card-title">${item.title}</h5>
                 <p class="card-text">${item.overview}</p>
@@ -136,3 +135,5 @@ print();
 //     })
 //     // .then(response => console.log(response["results"][0]["title"]))
 //     .catch(err => console.error(err));
+
+
