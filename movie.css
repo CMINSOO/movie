@@ -1,0 +1,30 @@
+/* 탑컨텐츠  */
+.topcontent {
+    
+    background-color: black;
+    height: 100px;
+    color: white;
+
+    background-image: url('');
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* 검색창 라인 */
+.searchbar {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    border-bottom: 1px solid black;
+
+}
