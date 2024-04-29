@@ -28,23 +28,23 @@ async function getdata() {
         movieinfo['overview'] = item['overview'];
         movieinfo['poster_path'] = item['poster_path'];
         movieinfo['vote_average'] = item['vote_average'];
-        movieinfo['movie_id'] = item['movie_id'];
+        movieinfo['movie_id'] = item['id'];
 
         // console.log(movieinfo);
         newmovieinfo.push(movieinfo);
-        // console.log(newmovieinfo);
+        console.log(newmovieinfo);
     }
     return newmovieinfo;
 }
 getdata();
 
 //카드 만들기
-function makeCard(item, count) {
+function makeCard(item) {
     const innerContents = `
     <div class="card" style="width: 18rem;">
     <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" class="card-img-top" alt="이미지 준비중" onclick = "alert(${item.movie_id})">
           <div class="card-body">
-             <h5 class="card-title">${item.title}</h5>
+             <h3 class="card-title">${item.title}</h3>
                 <p class="card-text">${item.overview}</p>
     </div>
     <div>
@@ -58,7 +58,8 @@ function makeCard(item, count) {
 //카드 알러트 함수
 
 // document.getElementsByClassName("card-img-top").addEventListener("click", function () {
-//     alert("");
+//     alert();
+//  console.log(`ID: + ${item.movie_id}`)
 // });
 
 //검색기능함수 트라이1
@@ -89,7 +90,7 @@ function makeCard(item, count) {
 //     }
 //     console.log("되나?");
 // }
-// movieSearch();
+// movieSearch();       ㅇ ㅏ 필터쓰면 될거같은데  
 
 
 // //출력함수
@@ -99,7 +100,7 @@ async function print() {
     const data = await getdata();
     let count = 0;
     data.forEach(function (item) {
-        makeCard(item, count);
+        makeCard(item);
         count++;
     });
 
