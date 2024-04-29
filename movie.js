@@ -63,18 +63,18 @@ function makeCard(item) {
 // });
 
 //검색기능함수 트라이1
-
-// function movieSearch() {
-//     // 검색을 위해 모두 소문자로 통일시키기
-//     const makesametitle = document.querySelector("#searchbtn").Value.toLowerCase();
-//     // 검색한것이 제목과 같은지 비교하기
-//     const searchContext = function newmovieinfo() {
-//         if (i['title'].toLowerCase().search(makesametitle) === newmovieinfo) {
-//             return i['title'];
-//         }
-//     }
-// }
-
+/*
+function movieSearch() {
+    // 검색을 위해 모두 소문자로 통일시키기
+    const makesametitle = document.querySelector("#searchbtn").Value.toLowerCase();
+    // 검색한것이 제목과 같은지 비교하기
+    const searchContext = function newmovieinfo() {
+        if (i['title'].toLowerCase().search(makesametitle) === newmovieinfo) {
+            return i['title'];
+        }
+    }
+}
+*/
 // //  트라이2
 //     let titles = newmovieinfo['title'];
 
@@ -90,7 +90,7 @@ function makeCard(item) {
 //     }
 //     console.log("되나?");
 // }
-// movieSearch();       ㅇ ㅏ 필터쓰면 될거같은데  
+// movieSearch();       ㅇ ㅏ 필터쓰면 될거같은데 
 
 
 // //출력함수
