@@ -75,6 +75,15 @@
     width: 285px;
 }
 
+.card-title {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    padding-top: 10px;
+}
+
 .score {
     border-top: 1px solid black;
 }
