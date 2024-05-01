@@ -10,16 +10,7 @@ async function getdata() {
 
     const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
     const data = await response.json()
-    // .then(response => console.log(response))
-    // .catch(err => console.error(err));
-
-    // console.log(data) 
-
-
-    // data.forEach(item => {
-    //     console.log(item.title)
-    // });
-
+   
     const newmovieinfo = [];
 
     for (item of data['results']) {
@@ -48,52 +39,12 @@ function makeCard(item) {
                 <p class="card-text">${item.overview}</p>
     </div>
     <div>
-        <small class = "score"> ${"raiting: " + item.vote_average}</small>
+        <small class = "score"> "rating:${item.vote_average}</small>
     </div>
 </div>
     `;
     document.querySelector("#movieCard").insertAdjacentHTML('beforeend', innerContents);
 }
-
-//카드 알러트 함수
-
-// document.getElementsByClassName("card-img-top").addEventListener("click", function () {
-//     alert();
-//  console.log(`ID: + ${item.movie_id}`)
-// });
-
-//검색기능함수 트라이1
-/*
-function movieSearch() {
-    // 검색을 위해 모두 소문자로 통일시키기
-    const makesametitle = document.querySelector("#searchbtn").Value.toLowerCase();
-    // 검색한것이 제목과 같은지 비교하기
-    const searchContext = function newmovieinfo() {
-        if (i['title'].toLowerCase().search(makesametitle) === newmovieinfo) {
-            return i['title'];
-        }
-    }
-}
-*/
-// //  트라이2
-//     let titles = newmovieinfo['title'];
-
-//     let searchedTitle = titles.filter(function(title){
-//         if(searchedTitle == )
-//     }
-// )
-
-// function movieSearch (){
-//     const makesametitle = document.querySelector("#searchbtn").Value.toLowerCase();
-//     if (makesametitle == newmovieinfo){
-//         return results;
-//     }
-//     console.log("되나?");
-// }
-// movieSearch();       ㅇ ㅏ 필터쓰면 될거같은데 
-
-
-// //출력함수
 
 
 async function print() {
